@@ -24,8 +24,54 @@ header {
   border-radius: 5px;
 }
 
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0 16px;
+}
+
 header h1 {
   margin-bottom: 10px;
+}
+
+.account-controls {
+  position: relative;
+}
+
+.icon-btn {
+  font-size: 20px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-menu {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  width: 220px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  z-index: 10;
+  color: #333;
+}
+
+.account-menu p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.account-menu button {
+  width: 100%;
+  margin-top: 8px;
 }
 
 main {
@@ -164,6 +210,14 @@ button:hover {
   background-color: #3949ab;
 }
 
+.secondary-btn {
+  background-color: #607d8b;
+}
+
+.secondary-btn:hover {
+  background-color: #546e7a;
+}
+
 .message {
   margin-top: 20px;
   padding: 10px;
@@ -197,4 +251,41 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 20;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+@media (max-width: 640px) {
+  .header-top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .account-controls {
+    align-self: flex-end;
+  }
 }
